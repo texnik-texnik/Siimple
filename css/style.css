@@ -1,0 +1,446 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+  color: #fd680e;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff8f4c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-primary {
+  font-family: "Raleway", sans-serif;
+}
+
+.header {
+  height: 80px;
+  padding: 20px 0;
+  z-index: 10;
+  position: relative;
+}
+
+.header .logo h1 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.3rem;
+}
+
+.header .logo h1 > a:hover {
+  color: #fd680e !important;
+}
+
+.nav-toggle {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 0;
+  background: #22222280;
+  text-align: right;
+  padding: 7px 12px;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+.nav-toggle span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-toggle:focus {
+  right: 30%;
+}
+
+.user {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/hero-bg.jpg") center;
+  background-size: cover;
+  margin-top: -80px;
+  z-index: 9;
+}
+
+.user .user-container {
+  padding: 0px 15px;
+}
+
+.user h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #222;
+}
+
+.user h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.user .e-mail-forma input {
+  font-size: 14px;
+  padding: 0px 15px 2px 20px;
+  width: 250px;
+  height: 40px;
+  margin: 0 8px;
+}
+
+.user .e-mail-forma button {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 30px;
+  transition: 0.3s;
+  margin: 10px;
+  border: none;
+  color: #fff;
+  background: #fd680e;
+}
+
+.user .e-mail-forma button:hover {
+  background: #fff;
+  color: #000;
+  transform: scaleX(1.2);
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-bg {
+  background-color: #fff7f2;
+}
+
+.section-mediana {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-mediana h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.section-mediana h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #fd680e;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+.section-mediana p {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #666666;
+}
+
+.about h3 {
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about ul li {
+  padding-bottom: 10px;
+}
+
+.about ul span {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #fd680e;
+}
+
+.section-cards {
+  padding-bottom: 30px;
+}
+
+.section-cards .card {
+  margin-bottom: 30px;
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.102);
+  transition: 0.5s;
+}
+
+.section-cards .card-icon {
+  text-align: center;
+  margin-top: -32px;
+}
+
+.section-cards .card-icon span {
+  display: inline-block;
+  font-size: 32px;
+  width: 64px;
+  height: 64px;
+  padding-top: 10px;
+  color: #fff;
+  background-color: #fd680e;
+  border-radius: 50%;
+  text-align: center;
+  border: 4px solid #fff;
+  transition: 0.3s;
+}
+
+.section-cards .card-body {
+  padding-top: 12px;
+}
+
+.section-cards .card-title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-cards .card-title a {
+  color: #743e1d;
+}
+
+.section-cards .card-title a:hover {
+  color: #fd680e;
+}
+
+.section-cards .card-text {
+  color: #5e5e5e;
+}
+
+.section-cards .card:hover .card-icon span,
+.card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.safsata {
+  padding-bottom: 60px;
+}
+
+.safsata .safsata-list {
+  padding: 0;
+  list-style: none;
+}
+
+.safsata .safsata-list li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.safsata .safsata-list a {
+  display: block;
+  position: relative;
+  font-family: #fd680e;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.safsata .safsata-list span {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.safsata .safsata-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.safsata .safsata-list .icon-show {
+  display: none;
+}
+
+.safsata .safsata-list a.collapsed {
+  color: #343a40;
+}
+
+.safsata .safsata-list a.collapsed:hover {
+  color: #fd680e;
+}
+
+.safsata .safsata-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.safsata .safsata-list a.collapsed .icon-close {
+  display: none;
+}
+
+.contact .info {
+  color: #444444;
+}
+
+.contact .info span {
+  font-size: 32px;
+  color: #fd680e;
+  float: left;
+}
+
+.contact .info p {
+  padding: 0 0 10px 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .soc-link a {
+  font-size: 20px;
+  display: inline-block;
+  background: #5a2c10;
+  color: #fff;
+  line-height: 1;
+  padding: 12px 8px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.contact .soc-link a.twitter-hover:hover {
+  background: none;
+  font-size: 35px;
+  padding: 4px 4px;
+  color: #179cf0;
+}
+.contact .soc-link a.facebook-hover:hover {
+  background: #0034b7;
+  border-radius: 30%;
+}
+.contact .soc-link a.instagram-hover:hover {
+  border-radius: 35%;
+  font-size: 30px;
+
+  padding: 6px 4px;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #4f67c5 90%
+  );
+}
+.contact .soc-link a.linkedin-hover:hover {
+  background: #005a8a;
+  border-radius: 30%;
+}
+
+.contact .e-mail-forma input,
+.contact .e-mail-forma textarea {
+  border-radius: 0;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.contact .e-mail-forma input:focus,
+.contact .e-mail-forma textarea:focus {
+  border-color: #fd680e;
+}
+
+.contact .e-mail-forma button {
+  background: #fd680e;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.contact .e-mail-forma button:hover {
+  background: #fd8841;
+}
+
+.footer {
+  background: #2f1708;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer .copyright {
+  text-align: center;
+}
+
+.footer .credits {
+  padding-top: 10px;
+  font-size: 13px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header .logo h1 {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+
+  .contact .soc-link {
+    text-align: center;
+  }
+
+  .user h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .user h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .user .e-mail-forma input {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-cards {
+    background-attachment: scroll;
+  }
+  .section-cards .card:hover {
+    transform: scale(1);
+  }
+}
