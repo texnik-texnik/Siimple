@@ -19,11 +19,22 @@
           </h1>
         </div>
         <div class="d-inline">
-          <button class="nav-toggle"><span class="bi bi-list"></span></button>
+          <button class="nav-toggle" onclick="showMenuBtn()">
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
-    <section id="user" class="user">
+    <div class="durAni right-flip-navbar" id="flipNavBar">
+      <ul>
+         <li><a href="#user">Home</a></li>
+         <li><a href="#main">About</a></li>
+         <li><a href="#section-cards">Card</a></li>
+         <li><a href="#safsata-lists">JS Accordion</a></li>
+         <li><a href="#section-epifooter">My Contacts</a></li>
+      </ul>
+      </div>
+    <section id="user" class="user ">
       <div
         class="user-container position-absolute start-0 end-0 top-0 d-flex justify-content-center align-items-center text-center flex-column"
       >
@@ -37,8 +48,9 @@
               <input
                 type="text"
                 name="name"
+                tabindex="1"
                 class="form-control border-0 rounded-5"
-                id="name"
+                id="name-log"
                 placeholder="Your Name"
               />
             </div>
@@ -47,14 +59,18 @@
                 type="email"
                 class="form-control border-0 rounded-5"
                 name="email"
-                id="email"
+                tabindex="2"
+                id="email-log"
                 placeholder="Your Email"
               />
             </div>
           </div>
           <div class="text-center mt-1 btn-back">
-            <button type="submit" class="my-Nbtn">Notify me!</button>
-          </div>
+             <button tabindex="3" type="submit" class="my-Nbtn">
+                <span class="text-btn">Notify me!</span>
+               </button>
+            </div>
+            <div class="mt-2 text-danger border border-danger bg-warning hide">Write correct data!</div>
         </form>
       </div>
     </section>
@@ -65,8 +81,9 @@
             <div class="col-lg-6">
               <img
                 src="./img/about-img.jpg"
-                class="full-img h-auto mw-100"
+                class="about-img"
                 alt=""
+                width="100%"
               />
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
@@ -90,7 +107,7 @@
                 <li>
                   <span class="bi bi-check-all"></span> Ullamco laboris nisi ut
                   aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate trideta storacalaperda mastiro
+                  reprehenderit in voluptate tridents storacalaperda mastiro
                   dolore eu fugiat nulla pariatur.
                 </li>
               </ul>
@@ -105,14 +122,14 @@
           </div>
         </div>
       </section>
-      <section id="section-cards" class="section-cards section-bg">
+      <section id="section-cards" class="section-cards section-bg ">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="card">
                 <img src="./img/why-us-1.jpg" class="card-img-top" alt="" />
                 <div class="card-icon">
-                  <span class="bx bx-book-reader"></span>
+                  <span class="mission"></span>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"><a href="#">Our Mission</a></h5>
@@ -129,7 +146,7 @@
               <div class="card">
                 <img src="./img/why-us-2.jpg" class="card-img-top" alt="" />
                 <div class="card-icon">
-                  <span class="bx bx-calendar-edit"></span>
+                  <span class="plan"></span>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"><a href="#">Our Plan</a></h5>
@@ -146,7 +163,7 @@
               <div class="card">
                 <img src="./img/why-us-3.jpg" class="card-img-top" alt="" />
                 <div class="card-icon">
-                  <span class="bx bx-landscape"></span>
+                  <span class="vision"></span>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"><a href="#">Our Vision</a></h5>
@@ -162,18 +179,17 @@
           </div>
         </div>
       </section>
-      <section class="safsata bg-white">
+      <section class="safsata bg-white " id="safsata-lists">
         <div class="container">
           <div class="zagolovki"><h2>Frequenty Asked Questions</h2></div>
           <ul class="safsata-list p-0">
             <li>
-              <a 
-                class="collapsed"
-                data-bs-target="#faq1">Non consectetur a erat nam at lectus urna duis?
-                <span class="bi bi-arrow-down show"></span
-                ><span class="bi bi-x-lg hide"></span
-              ></a>
-              <div id="faq1" class="collapse">
+              <a class="showHideBtn">
+                Non consectetur a erat nam at lectus urna duis?
+                <span class="bi bi-arrow-down"></span>
+                <span class="bi bi-x-lg hide"></span>
+              </a>
+              <div class="hide">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deserunt laudantium accusamus, officia fugiat ipsa atque
@@ -186,15 +202,12 @@
               </div>
             </li>
             <li>
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq2"
-                class="collapsed"
+              <a class="showHideBtn"
                 >Feugiat scelerisque varius morbi enim nunc faucibus a
-                pellentesque? <span class="bi bi-arrow-down show"></span
+                pellentesque? <span class="bi bi-arrow-down"></span
                 ><span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq2" class="collapse" data-bs-parent=".safsata-list">
+              <div class="hide">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Possimus itaque aspernatur eaque quo, deserunt ducimus quaerat
@@ -207,15 +220,12 @@
               </div>
             </li>
             <li>
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq3"
-                class="collapsed"
+              <a class="showHideBtn"
                 >Dolor sit amet consectetur adipiscing elit pellentesque
-                habitant morbi? <span class="bi bi-arrow-down show"></span
+                habitant morbi? <span class="bi bi-arrow-down"></span
                 ><span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq3" class="collapse" data-bs-parent=".safsata-list">
+              <div class="hide">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Asperiores, ratione accusamus vero dolores dolor amet, nemo
@@ -228,15 +238,12 @@
               </div>
             </li>
             <li>
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq4"
-                class="collapsed"
+              <a class="showHideBtn"
                 >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                <span class="bi bi-arrow-down show"></span
+                <span class="bi bi-arrow-down"></span
                 ><span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq4" class="collapse" data-bs-parent=".safsata-list">
+              <div class="hide">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium vero tempore quod eveniet deserunt vel iusto
@@ -249,15 +256,12 @@
               </div>
             </li>
             <li>
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq5"
-                class="collapsed"
+              <a class="showHideBtn"
                 >Tempus quam pellentesque nec nam aliquam sem et tortor
-                consequat? <span class="bi bi-arrow-down show"></span
+                consequat? <span class="bi bi-arrow-down"></span
                 ><span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq5" class="collapse" data-bs-parent=".safsata-list">
+              <div class="hide">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Doloribus quos sit maiores aliquam ab dolore pariatur natus
@@ -271,16 +275,13 @@
               </div>
             </li>
             <li>
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq6"
-                class="collapsed"
+              <a class="showHideBtn"
                 >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
                 turpis nunc eget lorem dolor?
-                <span class="bi bi-arrow-down show"></span>
+                <span class="bi bi-arrow-down"></span>
                 <span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq6" class="collapse" data-bs-parent=".safsata-list">
+              <div class="hide">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                   debitis, deleniti voluptatibus iste, sequi voluptate cumque
@@ -295,7 +296,7 @@
           </ul>
         </div>
       </section>
-      <section id="section-epifooter" class="section-epifooter section-bg">
+      <section id="section-epifooter" class="section-epifooter section-bg ">
         <div class="container">
           <div class="zagolovki"><h2>Contact Us</h2></div>
 
@@ -320,25 +321,25 @@
 
               <div class="sotcsety">
                 <a
-                  href="https://www.twitter.com/"
+                  href="https://twitter.com/dr_texnik"
                   class="twitter-hover"
                   target="_blank"
                   ><span class="bx bxl-twitter"></span
                 ></a>
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/1hack.you1/"
                   class="facebook-hover"
                   target="_blank"
                   ><span class="bx bxl-facebook"></span
                 ></a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/presidentl01/"
                   class="instagram-hover"
                   target="_blank"
                   ><span class="bx bxl-instagram"></span
                 ></a>
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/emomali-abdulloev-12767b258"
                   class="linkedin-hover"
                   target="_blank"
                   ><span class="bx bxl-linkedin"></span
@@ -347,7 +348,7 @@
             </div>
 
             <div class="col-lg-5 col-md-7">
-              <form action="#" class="e-mail-forma">
+              <form action="#" class="e-mail-forma forma-2">
                 <div class="form-group">
                   <input
                     type="text"
@@ -355,6 +356,7 @@
                     class="form-control"
                     id="name"
                     placeholder="Your Name"
+                    tabindex="3"
                   />
                 </div>
                 <div class="form-group mt-3">
@@ -364,6 +366,7 @@
                     name="email"
                     id="email"
                     placeholder="Your Email"
+                    tabindex="4"
                   />
                 </div>
                 <div class="form-group mt-3">
@@ -373,19 +376,22 @@
                     name="subject"
                     id="subject"
                     placeholder="Subject"
+                    tabindex="5"
                   />
                 </div>
                 <div class="form-group mt-3">
                   <textarea
                     class="form-control"
                     name="message"
-                    rows="5"
+                    rows="6"
                     placeholder="Message"
+                    tabindex="6"
                   ></textarea>
                 </div>
                 <div class="text-center my-2">
-                  <button type="submit">Send Message</button>
+                  <button tabindex="7" name="sBtn" type="submit">Send Message</button>
                 </div>
+                <div class="text-center border border-danger text-danger hide">You have not entered data!</div>
               </form>
             </div>
           </div>
@@ -399,11 +405,13 @@
           >. All Rights Reserved
         </div>
         <div class="credits text-center">
-          Designed by <a href="#">BootstrapMade</a>
+          Designed by
+          <a href="https://www.linkedin.com/in/emomali-abdulloev-12767b258"
+            >EMOMALI ABDULLOEV</a
+          >
         </div>
       </div>
     </footer>
-    <!-- <script src="./js/bootstrap.min.js"></script> -->
     <script src="./js/script.js"></script>
   </body>
 </html>

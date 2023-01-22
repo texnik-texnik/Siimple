@@ -12,6 +12,9 @@
   font-style: normal;
 }
 
+html {
+   scroll-behavior: smooth!important;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -49,7 +52,7 @@ h6,
   font-size: 2.25rem;
   line-height: 1;
   font-weight: 300;
-  letter-spacing: 0.3rem;
+  letter-spacing: .3rem;
 }
 
 .header .logo h1 > a:hover {
@@ -57,24 +60,111 @@ h6,
 }
 
 .nav-toggle {
-  position: absolute;
+   z-index: 10;
   right: 15px;
   top: 15px;
   border: 0;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #22222280;
   text-align: right;
-  padding: 7px 12px;
+  padding: 20px 20px;
   border-radius: 2px;
-  transition: 0.5s;
+  transition: 1s;
+  position: fixed;
 }
 
 .nav-toggle span {
-  color: #fff;
-  font-size: 18px;
+   content: "";
+   width: 40%;
+   height: 2px;
+   display: block;
+   position: absolute;
+   margin: 0 auto;
+   right: 0;
+   left: 0;
+   background-color: #fff;
+   transition: 1s;
+}
+.nav-toggle span::before {
+   content: "";
+   width: 100%;
+   height: 2px;
+   bottom: 5px;
+   left: 0%;
+   position: absolute;
+   background-color: #fff;
+   transition: 1s;
+}
+.nav-toggle span::after {
+   content: "";
+   width: 100%;
+   height: 1.5px;
+   top: 5px;
+   left: 0%;
+   position: absolute;
+   background: #fff;
+   transition: 1s;
 }
 
-.nav-toggle:focus {
+button.nav-toggle-focused {
+
+  position: fixed;
   right: 30%;
+}
+
+.nav-toggle.nav-toggle-focused span {
+   transform: rotate(360deg);
+   background-color: #00000000;
+}
+
+.nav-toggle.nav-toggle-focused span::before {
+   box-shadow: 0 0 5px #000;
+   border-radius: 50%;
+   bottom: 0;
+   transform: rotate(135deg);
+}
+.nav-toggle.nav-toggle-focused span::after {
+   box-shadow: 0 0 5px #000;
+   border-radius: 50%;
+   top: 0;
+   transform: rotate(-135deg);
+}
+
+.durAni {
+   transition: 1s;
+}
+
+.durAni ul{
+   list-style: none;
+}
+
+.durAni li{
+   line-height: 50px;
+
+}
+
+.durAni ul li a{
+   font-family: 'Raleway', sans-serif;
+   font-size: large;
+   color: white;
+   text-decoration: none;
+}
+
+.right-flip-navbar {
+   z-index: 9;
+   position:fixed;
+   width: 30%;
+   transform: translateX(100%);
+   top: 15px;
+   right: 0;
+   height: 100%;
+   padding-top: 40px;
+   background-color: #fd680e;
+}
+
+body div.showMenu {
+   transform: translateX(0%);
 }
 
 .user {
@@ -115,28 +205,52 @@ h6,
 
 
 .my-Nbtn {
-   border: none;
+  border: none;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
   padding: 8px 30px;
-  transition: all 0.7s;
   margin: 10px;
-  border: #00000000 solid 1.5px;
+  outline: none;
   color: #fff;
-  overflow: hidden;
   cursor: pointer;
   position: relative;
   background: #fd680e;
   border-radius: 50px;
+  user-select: none;
 }
-
 
 
 .my-Nbtn:hover {
-  color: #000;
-  background-color: #fff7f2;
+   background: linear-gradient(90deg, #07a7f1, #fa46ac, #fae736, #07a7f1);
+   background-size: 400%;
+   animation: blesk 8s linear infinite;
 }
+
+@keyframes blesk {
+   from{
+      background-position: 0%;
+   }
+   to{
+      background-position: 400%;
+   }
+}
+
+.my-Nbtn::before {
+   content: "";
+   position: absolute;
+   top: -1px;
+   left: -1px;
+   bottom: -1px;
+   right: -1px;
+   background: inherit;
+   border-radius: 50px;
+   filter: blur(20px);
+   opacity: 0;
+   transition: opacity .5s;
+}
+
+
 
 section {
   padding: 5rem 0;
@@ -156,18 +270,16 @@ section {
   font-weight: 300;
   margin-bottom: 1.25rem;
   padding-bottom: 15px;
-  position: relative;
 }
 
 .zagolovki h2::after {
   content: "";
-  position: absolute;
+  padding: 1.5px;
+  margin: 5px auto;
   display: block;
   width: 5rem;
-  height: 2px;
+  border-radius: 50px;
   background: #fd680e;
-  bottom: 0;
-  left: calc(50% - 40px);
 }
 
 .hypo-user h3 {
@@ -200,29 +312,44 @@ section {
   border: 0;
   box-shadow: 0px 2px 15px #0000001a;
   transition: 0.5s;
+  position: relative;
 }
 
 .section-cards .card-icon {
   text-align: center;
-  margin-top: -2rem;
+  position: absolute;
+  top: 15.5rem;
+  right: 0;
+  left: 0;
 }
 
 .section-cards .card-icon span {
-  display: inline-block;
-  font-size: 2rem;
-  width: 64px;
-  height: 64px;
-  padding-top: 10px;
+   display: inline-block;
+   font-size: 2rem;
+  width:  4rem;
+  height:  4rem;
   color: #fff;
-  background-color: #fd680e;
+  background-color: #ff8514;
   border-radius: 50%;
   text-align: center;
   border: 4px solid #fff;
   transition: 0.3s;
 }
 
+.section-cards .card-icon span.mission {
+   content: url(../img/mission.png);
+}
+.section-cards .card-icon span.plan {
+   content: url(../img/plan.png);
+}
+.section-cards .card-icon span.vision {
+   padding: 5px;
+   content: url(../img/vision.png);
+}
+
 .section-cards .card-body {
   padding-top: 12px;
+  margin-top: 40px;
 }
 
 .section-cards .card-title {
@@ -249,7 +376,7 @@ section {
 }
 
 .safsata {
-  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
 }
 
 .safsata .safsata-list {
@@ -284,26 +411,15 @@ section {
   padding: 10px 0 0 0;
 }
 
-.safsata .safsata-list .show {
-  display: none;
-}
-.safsata .safsata-list .hide {
-  display: inline-block;
-}
-
-.safsata .safsata-list a.collapsed .show {
-   display: inline-block;
-}
-
-.safsata .safsata-list a.collapsed  .hide {
+.hide {
    display: none;
 }
 
-.safsata .safsata-list a.collapsed {
+.safsata .safsata-list a.showHideBtn {
   color: #343a40;
 }
 
-.safsata .safsata-list a.collapsed:hover {
+.safsata .safsata-list a.showHideBtn:hover {
   color: #fd680e;
 }
 
@@ -349,6 +465,7 @@ section {
   padding: 4px 4px;
   color: #179cf0;
 }
+
 .section-epifooter .sotcsety a.facebook-hover:hover {
   background: #0034b7;
   border-radius: 30%;
@@ -414,7 +531,42 @@ section {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+::-webkit-scrollbar {
+   width: 12px;
+}
+
+@media (max-width: 1399px) {
+   .section-cards .card-icon {
+      top: 13rem;
+    }
+   
+}
+@media (max-width: 1199px) {
+    .section-cards .card-icon {
+      top: 10.5rem;
+    }
+   
+}
+
+@media (max-width: 1024px) {
+   .section-cards {
+    background-attachment: scroll;
+  }
+  .section-cards .card:hover {
+    transform: scale(1);
+  }
+  .section-cards .card-icon {
+   top: 10.5rem;
+ }
+}
+
+@media (max-width: 992px) {
+   .section-cards .card-icon {
+      top: 12rem;
+    }
+}
+
+@media (max-width: 767px) {
   .header .logo h1 {
     font-size: 28px;
     padding: 8px 0;
@@ -440,20 +592,35 @@ section {
     margin-left: auto;
     margin-bottom: 5px;
   }
+
+
+ .section-cards .card-icon {
+   top: 19.5rem;
+ }
+ button.nav-toggle-focused {
+  
+   position: fixed;
+   right: 50%;
+ }
+ .right-flip-navbar {
+  width: 50%; 
+}
+}
+@media (max-width: 575px) {
+   .section-cards .card-icon {
+      top: 54vw;
+    }
 }
 
-@media (max-width: 1024px) {
-  .section-cards {
-    background-attachment: scroll;
-  }
-  .section-cards .card:hover {
-    transform: scale(1);
-  }
+
+@media (max-width: 355px) {
+   .section-cards .card-icon {
+      top: 52vw;
+    }
 }
 
-::-webkit-scrollbar {
-   width: 12px;
-}
+
+
 ::-webkit-scrollbar-track {
    border-radius: 10vh;
    background: #fd6a0e6c;
