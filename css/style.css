@@ -4,15 +4,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background-color: #1f2937;
 }
 
 a {
@@ -36,14 +39,14 @@ h6,
 }
 
 .header {
-  height: 80px;
-  padding: 20px 0;
+  height: 5rem;
+  padding: 1.25rem 0;
   z-index: 10;
   position: relative;
 }
 
 .header .logo h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 0.3rem;
@@ -79,11 +82,11 @@ h6,
   height: 80vh;
   background: url("../img/hero-bg.jpg") center;
   background-size: cover;
-  margin-top: -80px;
-  z-index: 9;
+  margin-top: -5rem;
 }
 
 .user .user-container {
+   bottom: 20vh;
   padding: 0px 15px;
 }
 
@@ -98,7 +101,7 @@ h6,
 .user h2 {
   color: #333;
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .user .e-mail-forma input {
@@ -109,78 +112,80 @@ h6,
   margin: 0 8px;
 }
 
-.user .e-mail-forma button {
+
+
+.my-Nbtn {
+   border: none;
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 1px;
   padding: 8px 30px;
-  transition: 0.3s;
+  transition: all 0.7s;
   margin: 10px;
-  border: none;
+  border: #00000000 solid 1.5px;
   color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
   background: #fd680e;
+  border-radius: 50px;
 }
 
-.user .e-mail-forma button:hover {
-  background: #fff;
+
+
+.my-Nbtn:hover {
   color: #000;
-  transform: scaleX(1.2);
+  background-color: #fff7f2;
 }
 
 section {
-  padding: 80px 0;
+  padding: 5rem 0;
 }
 
 .section-bg {
   background-color: #fff7f2;
 }
 
-.section-mediana {
+.zagolovki {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 1.9rem;
 }
 
-.section-mediana h2 {
-  font-size: 32px;
+.zagolovki h2 {
+  font-size: 2rem;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   padding-bottom: 15px;
   position: relative;
 }
 
-.section-mediana h2::after {
+.zagolovki h2::after {
   content: "";
   position: absolute;
   display: block;
-  width: 80px;
-  height: 1px;
+  width: 5rem;
+  height: 2px;
   background: #fd680e;
   bottom: 0;
   left: calc(50% - 40px);
 }
 
-.section-mediana p {
-  margin-bottom: 0;
-  font-style: italic;
-  color: #666666;
-}
-
-.about h3 {
+.hypo-user h3 {
   font-weight: 300;
   font-size: 26px;
 }
 
-.about ul {
+.hypo-user ul {
   list-style: none;
   padding: 0;
 }
 
-.about ul li {
+.hypo-user ul li {
   padding-bottom: 10px;
 }
 
-.about ul span {
-  font-size: 20px;
+.hypo-user ul span {
+  font-size: 1.25rem;
   padding-right: 4px;
   color: #fd680e;
 }
@@ -193,18 +198,18 @@ section {
   margin-bottom: 30px;
   border-radius: 3px;
   border: 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.102);
+  box-shadow: 0px 2px 15px #0000001a;
   transition: 0.5s;
 }
 
 .section-cards .card-icon {
   text-align: center;
-  margin-top: -32px;
+  margin-top: -2rem;
 }
 
 .section-cards .card-icon span {
   display: inline-block;
-  font-size: 32px;
+  font-size: 2rem;
   width: 64px;
   height: 64px;
   padding-top: 10px;
@@ -240,7 +245,7 @@ section {
 .section-cards .card:hover .card-icon span,
 .card:hover {
   transform: scale(1.2);
-  z-index: 2;
+  z-index: 1;
 }
 
 .safsata {
@@ -248,14 +253,13 @@ section {
 }
 
 .safsata .safsata-list {
-  padding: 0;
   list-style: none;
 }
 
 .safsata .safsata-list li {
   border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .safsata .safsata-list a {
@@ -263,14 +267,13 @@ section {
   position: relative;
   font-family: #fd680e;
   font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
+  line-height: 1.5rem;
   padding-right: 25px;
   cursor: pointer;
 }
 
 .safsata .safsata-list span {
-  font-size: 24px;
+  font-size: 1.5rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -281,8 +284,19 @@ section {
   padding: 10px 0 0 0;
 }
 
-.safsata .safsata-list .icon-show {
+.safsata .safsata-list .show {
   display: none;
+}
+.safsata .safsata-list .hide {
+  display: inline-block;
+}
+
+.safsata .safsata-list a.collapsed .show {
+   display: inline-block;
+}
+
+.safsata .safsata-list a.collapsed  .hide {
+   display: none;
 }
 
 .safsata .safsata-list a.collapsed {
@@ -293,37 +307,29 @@ section {
   color: #fd680e;
 }
 
-.safsata .safsata-list a.collapsed .icon-show {
-  display: inline-block;
-}
-
-.safsata .safsata-list a.collapsed .icon-close {
-  display: none;
-}
-
-.contact .info {
+.section-epifooter .info {
   color: #444444;
 }
 
-.contact .info span {
-  font-size: 32px;
+.section-epifooter .info span {
+  font-size: 2rem;
   color: #fd680e;
   float: left;
 }
 
-.contact .info p {
+.section-epifooter .info p {
   padding: 0 0 10px 50px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   line-height: 22px;
   font-size: 14px;
 }
 
-.contact .info .email p {
+.section-epifooter .info .email p {
   padding-top: 5px;
 }
 
-.contact .soc-link a {
-  font-size: 20px;
+.section-epifooter .sotcsety a {
+  font-size: 1.25rem;
   display: inline-block;
   background: #5a2c10;
   color: #fff;
@@ -337,17 +343,17 @@ section {
   overflow: hidden;
 }
 
-.contact .soc-link a.twitter-hover:hover {
+.section-epifooter .sotcsety a.twitter-hover:hover {
   background: none;
   font-size: 35px;
   padding: 4px 4px;
   color: #179cf0;
 }
-.contact .soc-link a.facebook-hover:hover {
+.section-epifooter .sotcsety a.facebook-hover:hover {
   background: #0034b7;
   border-radius: 30%;
 }
-.contact .soc-link a.instagram-hover:hover {
+.section-epifooter .sotcsety a.instagram-hover:hover {
   border-radius: 35%;
   font-size: 30px;
 
@@ -362,24 +368,24 @@ section {
     #4f67c5 90%
   );
 }
-.contact .soc-link a.linkedin-hover:hover {
+.section-epifooter .sotcsety a.linkedin-hover:hover {
   background: #005a8a;
   border-radius: 30%;
 }
 
-.contact .e-mail-forma input,
-.contact .e-mail-forma textarea {
+.section-epifooter .e-mail-forma input,
+.section-epifooter .e-mail-forma textarea {
   border-radius: 0;
   font-size: 14px;
   box-shadow: none;
 }
 
-.contact .e-mail-forma input:focus,
-.contact .e-mail-forma textarea:focus {
+.section-epifooter .e-mail-forma input:focus,
+.section-epifooter .e-mail-forma textarea:focus {
   border-color: #fd680e;
 }
 
-.contact .e-mail-forma button {
+.section-epifooter .e-mail-forma button {
   background: #fd680e;
   border: 0;
   padding: 10px 24px;
@@ -387,7 +393,7 @@ section {
   transition: 0.4s;
 }
 
-.contact .e-mail-forma button:hover {
+.section-epifooter .e-mail-forma button:hover {
   background: #fd8841;
 }
 
@@ -414,7 +420,7 @@ section {
     padding: 8px 0;
   }
 
-  .contact .soc-link {
+  .section-epifooter .sotcsety {
     text-align: center;
   }
 
@@ -425,7 +431,7 @@ section {
 
   .user h2 {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.5rem;
     margin-bottom: 30px;
   }
 
@@ -443,4 +449,23 @@ section {
   .section-cards .card:hover {
     transform: scale(1);
   }
+}
+
+::-webkit-scrollbar {
+   width: 12px;
+}
+::-webkit-scrollbar-track {
+   border-radius: 10vh;
+   background: #fd6a0e6c;
+   border: solid #000 1px;
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 50vh;
+   border: solid #000 1px;
+   background: linear-gradient(
+      #ffffff50,
+      #fd6a0e,
+      #ffffff50
+   );
 }

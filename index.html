@@ -24,7 +24,9 @@
       </div>
     </header>
     <section id="user" class="user">
-      <div class="user-container position-absolute start-0 end-0 bottom-0 top-0 d-flex justify-content-center align-items-center text-center flex-column">
+      <div
+        class="user-container position-absolute start-0 end-0 top-0 d-flex justify-content-center align-items-center text-center flex-column"
+      >
         <h1>Welcome to Siimple</h1>
         <h2>
           Please, fill out the for below to be notified for the latest updates!
@@ -50,16 +52,14 @@
               />
             </div>
           </div>
-          <div class="text-center mt-1">
-            <button type="submit" class="rounded-5 fw-normal d-inline-block">
-              Notify me!
-            </button>
+          <div class="text-center mt-1 btn-back">
+            <button type="submit" class="my-Nbtn">Notify me!</button>
           </div>
         </form>
       </div>
     </section>
     <main id="main">
-      <section id="about" class="about">
+      <section id="hypo-user" class="hypo-user bg-white">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
@@ -162,22 +162,18 @@
           </div>
         </div>
       </section>
-      <section class="safsata">
+      <section class="safsata bg-white">
         <div class="container">
-          <div class="section-mediana">
-            <h2>Frequenty Asked Questions</h2>
-          </div>
-          <ul class="safsata-list">
+          <div class="zagolovki"><h2>Frequenty Asked Questions</h2></div>
+          <ul class="safsata-list p-0">
             <li>
-              <a
-                data-bs-toggle="collapse"
+              <a 
                 class="collapsed"
-                data-bs-target="#faq1"
-                >Non consectetur a erat nam at lectus urna duis?
-                <span class="bi bi-arrow-down icon-show"></span
-                ><span class="bi bi-x-lg icon-close"></span
+                data-bs-target="#faq1">Non consectetur a erat nam at lectus urna duis?
+                <span class="bi bi-arrow-down show"></span
+                ><span class="bi bi-x-lg hide"></span
               ></a>
-              <div id="faq1" class="collapse" data-bs-parent=".safsata-list">
+              <div id="faq1" class="collapse">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deserunt laudantium accusamus, officia fugiat ipsa atque
@@ -195,8 +191,8 @@
                 data-bs-target="#faq2"
                 class="collapsed"
                 >Feugiat scelerisque varius morbi enim nunc faucibus a
-                pellentesque? <span class="bi bi-arrow-down icon-show"></span
-                ><span class="bi bi-x-lg icon-close"></span
+                pellentesque? <span class="bi bi-arrow-down show"></span
+                ><span class="bi bi-x-lg hide"></span
               ></a>
               <div id="faq2" class="collapse" data-bs-parent=".safsata-list">
                 <p>
@@ -216,8 +212,8 @@
                 data-bs-target="#faq3"
                 class="collapsed"
                 >Dolor sit amet consectetur adipiscing elit pellentesque
-                habitant morbi? <span class="bi bi-arrow-down icon-show"></span
-                ><span class="bi bi-x-lg icon-close"></span
+                habitant morbi? <span class="bi bi-arrow-down show"></span
+                ><span class="bi bi-x-lg hide"></span
               ></a>
               <div id="faq3" class="collapse" data-bs-parent=".safsata-list">
                 <p>
@@ -237,8 +233,8 @@
                 data-bs-target="#faq4"
                 class="collapsed"
                 >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                <span class="bi bi-arrow-down icon-show"></span
-                ><span class="bi bi-x-lg icon-close"></span
+                <span class="bi bi-arrow-down show"></span
+                ><span class="bi bi-x-lg hide"></span
               ></a>
               <div id="faq4" class="collapse" data-bs-parent=".safsata-list">
                 <p>
@@ -258,8 +254,8 @@
                 data-bs-target="#faq5"
                 class="collapsed"
                 >Tempus quam pellentesque nec nam aliquam sem et tortor
-                consequat? <span class="bi bi-arrow-down icon-show"></span
-                ><span class="bi bi-x-lg icon-close"></span
+                consequat? <span class="bi bi-arrow-down show"></span
+                ><span class="bi bi-x-lg hide"></span
               ></a>
               <div id="faq5" class="collapse" data-bs-parent=".safsata-list">
                 <p>
@@ -281,8 +277,8 @@
                 class="collapsed"
                 >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
                 turpis nunc eget lorem dolor?
-                <span class="bi bi-arrow-down icon-show"></span>
-                <span class="bi bi-x-lg icon-close"></span
+                <span class="bi bi-arrow-down show"></span>
+                <span class="bi bi-x-lg hide"></span
               ></a>
               <div id="faq6" class="collapse" data-bs-parent=".safsata-list">
                 <p>
@@ -299,11 +295,9 @@
           </ul>
         </div>
       </section>
-      <section id="contact" class="contact section-bg">
+      <section id="section-epifooter" class="section-epifooter section-bg">
         <div class="container">
-          <div class="section-mediana">
-            <h2>Contact Us</h2>
-          </div>
+          <div class="zagolovki"><h2>Contact Us</h2></div>
 
           <div class="row justify-content-center">
             <div class="col-lg-3 col-md-5 mb-5 mb-md-0">
@@ -313,18 +307,18 @@
                   <p>A108 Adam Street<br />New York, NY 535022</p>
                 </div>
 
-                <div class="email">
+                <div class="email-icon">
                   <span class="bx bx-envelope"></span>
                   <p>info@example.com</p>
                 </div>
 
-                <div class="phone">
+                <div class="phone-icon">
                   <span class="bx bx-phone-call"></span>
                   <p>+1 5589 55488 55s</p>
                 </div>
               </div>
 
-              <div class="soc-link">
+              <div class="sotcsety">
                 <a
                   href="https://www.twitter.com/"
                   class="twitter-hover"
@@ -409,7 +403,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script src="./js/bootstrap.min.js"></script> -->
     <script src="./js/script.js"></script>
   </body>
 </html>
